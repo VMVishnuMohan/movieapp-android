@@ -29,6 +29,7 @@ import java.util.logging.LogRecord;
  */
 public class ImageLoader {
   MemoryCache memoryCache = new MemoryCache();
+
     FileCache fileCache;
     private Map<ImageView, String> imageViews = Collections
             .synchronizedMap(new WeakHashMap<ImageView, String>());

@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog pDialog;
     private ListView listView;
     private ListViewAdapter adapter;
-
     static String TITLE = "title";
     static String OVERVIEW = "overview";
     static String POSTER_PATH = "poster_path";
