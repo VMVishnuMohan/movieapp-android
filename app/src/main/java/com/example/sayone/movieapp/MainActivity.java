@@ -28,10 +28,7 @@ public class MainActivity extends AppCompatActivity {
     static String TITLE = "title";
     static String OVERVIEW = "overview";
     static String POSTER_PATH = "poster_path";
-
-
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
