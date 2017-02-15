@@ -20,24 +20,16 @@ public class MovieDetailActivity extends AppCompatActivity {
     String overview;
     String poster_path;
     String position;
-
     ImageLoader imageLoader = new ImageLoader(this);
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Get the view from singleitemview.xml
         setContentView(R.layout.singleitemview);
-
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
-      //  setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //setSupportActionBar(toolbar);
         //Your toolbar is now an action bar and you can use it like you always do, for example:
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
-
-
+        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
         Intent i = getIntent();
         // Get the result of rank
         title = i.getStringExtra("title");
@@ -46,17 +38,14 @@ public class MovieDetailActivity extends AppCompatActivity {
         // Get the result of population
         // Get the result of flag
         poster_path = i.getStringExtra("poster_path");
-
         // Locate the TextViews in singleitemview.xml
         TextView txttitle = (TextView) findViewById(R.id.title);
         TextView txtoverview = (TextView) findViewById(R.id.desc);
         // Locate the ImageView in singleitemview.xml
         ImageView imgposter = (ImageView) findViewById(R.id.thumbnailImg);
-
         // Set results to the TextViews
         txttitle.setText(title);
         txtoverview.setText(overview);
-
         // Capture position and set results to the ImageView
         // Passes flag images URL into ImageLoader.class
         imageLoader.DisplayImage(poster_path, imgposter);
